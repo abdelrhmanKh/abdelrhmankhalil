@@ -154,12 +154,6 @@ html {
     fill: #fff;
 }
 
-@media (max-width:768px) {
-    .floating-social {
-        display: none;
-    }
-}
-
 /* End Floating Social */
 
 /* Start My FrameWork */
@@ -250,12 +244,6 @@ header .nav-menu {
     display: flex;
     gap: 50px;
     font: normal normal normal 18px/22px 'Montserrat';
-}
-
-@media(max-width:768px) {
-    header .nav-menu, header .main-button {
-        display: none;
-    }
 }
 
 header .nav-menu .nav-item {
@@ -352,12 +340,6 @@ header .nav-menu .nav-item:hover::after {
     background-position: center;
 }
 
-@media (max-width:992px) {
-    .landing-section .img {
-        display: none;
-    }
-}
-
 /* End landing-section */
 
 /* Start About-section */
@@ -426,12 +408,6 @@ header .nav-menu .nav-item:hover::after {
     padding: 30px 60px;
 }
 
-@media (max-width:768px) {
-    .about-me .img::before, .about-me .img::after {
-        content: none;
-    }
-}
-
 /* End About-section */
 
 /* Strat my-services-section */
@@ -484,12 +460,6 @@ header .nav-menu .nav-item:hover::after {
     width: 250px;
     height: 250px;
     z-index: -1;
-}
-
-@media (max-width:768px) {
-    .my-services .card-container .card:last-of-type::after {
-        content: none;
-    }
 }
 
 .my-services .card-container .card:hover, .my-services .card-container .card:hover .circle, .my-services .card-container .card:hover .cls-1 {
@@ -630,12 +600,6 @@ header .nav-menu .nav-item:hover::after {
 
 .bootstrap-color {
     color: #7811F2;
-}
-
-@media (max-width:768px) {
-    .my_expertise .titles {
-        justify-content: center;
-    }
 }
 
 /* End my_expertise-section */
@@ -789,6 +753,7 @@ header .nav-menu .nav-item:hover::after {
 /* Start testimonials-section */
 
 .testimonials {
+    display: none;
     text-align: center;
     margin-top: 80px;
 }
@@ -846,18 +811,6 @@ header .nav-menu .nav-item:hover::after {
 .contact form input::placeholder, .contact form input[value], .contact form textarea::placeholder, .contact form select option, .contact form select[value], .contact form textarea[value] {
     color: var(--TextColor);
     font: normal normal 300 18px/22px Montserrat;
-}
-
-@media (max-width:768px) {
-    .contact form .form-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (max-width:1024px) {
-    .contact img {
-        display: none;
-    }
 }
 
 /* End contact-section */
@@ -944,11 +897,64 @@ footer .developer span {
     color: #2196f3;
 }
 
-@media (max-width:768px) {
+/* end footer-section */
+
+/* start small screens*/
+
+@media(max-width:768px) {
+    .Section-title {
+        font-size: 18px;
+    }
+    .Section-subtitle {
+        font-size: 28px;
+    }
+    .floating-social {
+        display: none;
+    }
+    .my-services .card-container .card .title-card {
+        font-size: 16px;
+    }
+    .my-services .card-container .card .description {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    header .nav-menu, header .main-button {
+        display: none;
+    }
+    .about-me .img::before, .about-me .img::after {
+        content: none;
+    }
+    .main-button {
+        font-size: 16px;
+    }
+    .about-me .main-button {
+        padding: 25px 55px;
+    }
+    .my_expertise .titles {
+        justify-content: center;
+    }
+    .portfolio .filter-item {
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .contact form .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
     footer .info-me .qouteofme {
         width: 100%;
     }
-    footer .info-me .infome {}
+    .my-services .card-container .card:last-of-type::after {
+        content: none;
+    }
 }
 
-/* end footer-section */
+@media (max-width:992px) {
+    .landing-section .img {
+        display: none;
+    }
+    .contact img {
+        display: none;
+    }
+}
+
+/* start small screens*/
