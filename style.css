@@ -803,7 +803,7 @@ header .nav-menu .nav-item:hover::after {
 }
 
 .contact form input, .contact form select, .contact form textarea {
-    padding: 25px;
+    padding: 22px;
     border: 1px solid var(--TextColor);
     border-radius: 5px;
 }
