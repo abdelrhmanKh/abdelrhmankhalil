@@ -804,7 +804,7 @@ header .nav-menu .nav-item:hover::after {
 }
 
 .contact form input, .contact form select, .contact form textarea {
-    padding: 22px;
+    padding: 20px 10px;
     border: 1px solid var(--TextColor);
     border-radius: 5px;
 }
