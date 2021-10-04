@@ -912,6 +912,9 @@ footer .developer span {
     .contact form textarea {
         width: 105%;
     }
+    footer .info-me {
+        width: 90%;
+    }
 }
 
 @media(max-width:768px) {
