@@ -1,0 +1,956 @@
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Microsoft';
+' */
+
+/* Start Global Items  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Microsoft';
+    src: url('/font/chinese.msyh.ttf');
+}
+
+:root {
+    --mainColor: hsl(218, 85%, 40%);
+    --mainColor-op08: rgba(15, 79, 189, 0.8);
+    --seconderyColor: hsl(41, 78%, 55%);
+    --seconderyColor-op10: hsla(41, 78%, 55%, 0.1);
+    --TextColor: hsl(229, 51%, 17%);
+    --shadowColor: hsla(229, 31%, 59%, 0.18);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.box-shadow {
+    box-shadow: 0px 20px 20px var(--shadowColor);
+}
+
+.Section-title {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--seconderyColor-op10);
+    color: var(--seconderyColor);
+    font: normal normal normal 20px 'Montserrat';
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.main-button {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #0F50BF;
+    color: white;
+    border: none;
+    font: normal normal normal 25px/30px 'Montserrat';
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+/* .main-button a {
+    color: white;
+    text-decoration: none;
+} */
+
+.main-button:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.main-button:active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.goupbtn {
+    display: inline-block;
+    position: fixed;
+    z-index: 999;
+    bottom: 25px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+/* End Global Items  */
+
+/* Start Floating Social */
+
+.floating-social {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.floating-social a {
+    margin-left: -30px;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    padding: 15px 25px;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.floating-social a svg {
+    height: 30px;
+}
+
+.cls-1 {
+    fill: var(--TextColor);
+}
+
+.floating-social a:hover {
+    margin-left: -25px;
+}
+
+.floating-social a:hover, .floating-social a:hover .cls-1 {
+    background-color: var(--seconderyColor);
+    fill: #fff;
+}
+
+@media (max-width:768px) {
+    .floating-social {
+        display: none;
+    }
+}
+
+/* End Floating Social */
+
+/* Start My FrameWork */
+
+.container {
+    width: 100vw;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+@media (min-width:576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media (min-width:1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+@media (min-width:1620px) {
+    .container {
+        width: 1450px;
+    }
+}
+
+/* End My FrameWork */
+
+/* Start Nav Bar */
+
+header {
+    margin-top: 29px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav div {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+header .logo {
+    color: var(--TextColor);
+    font: normal normal bold 49px/47px 'Poppins';
+    cursor: unset;
+}
+
+header .logo span {
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+}
+
+header .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    font: normal normal normal 18px/22px 'Montserrat';
+}
+
+@media(max-width:768px) {
+    header .nav-menu, header .main-button {
+        display: none;
+    }
+}
+
+header .nav-menu .nav-item {
+    cursor: pointer;
+    color: var(--TextColor);
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+header .nav-menu .nav-item a {
+    color: var(--TextColor);
+    text-decoration: none;
+}
+
+header .nav-menu .nav-item:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    background-color: var(--seconderyColor);
+    animation-name: borderanim;
+    animation-duration: 0.5s;
+    width: 100%;
+}
+
+@keyframes borderanim {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* End Nav Bar */
+
+/* Start landing-section */
+
+.landing-section {
+    margin-top: 25px;
+}
+
+.landing-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.landing-section .text {
+    width: 608px;
+}
+
+.landing-section .my-name {
+    font: normal normal normal 20px/24px "Montserrat";
+    color: var(--TextColor);
+    margin: 30px 0;
+}
+
+.landing-section .my-job-title {
+    font: normal normal bold 60px/85px 'Microsoft';
+    color: var(--TextColor);
+    margin-top: 10px;
+    position: relative;
+}
+
+.landing-section .my-job-title span {
+    font: normal normal normal 20px"Montserrat";
+    position: absolute;
+    bottom: -4px;
+    right: 175px;
+}
+
+.landing-section .my-job-title span a {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.landing-section .description {
+    font: normal normal 300 16px/35px "Montserrat";
+    margin-bottom: 30px;
+}
+
+.landing-section .img {
+    width: 530px;
+    height: 680px;
+    background-image: url('img/Group\ 204.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media (max-width:992px) {
+    .landing-section .img {
+        display: none;
+    }
+}
+
+/* End landing-section */
+
+/* Start About-section */
+
+.about-me {
+    margin-top: 60px;
+}
+
+.about-me .container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 665px));
+}
+
+.about-me .img {
+    width: 100%;
+    position: relative;
+}
+
+.about-me .img::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    top: -10%;
+    left: -20%;
+    border: 30px solid var(--mainColor);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.about-me .img::after {
+    content: "";
+    position: absolute;
+    background-image: url(img/Group\ 224.png);
+    z-index: -1;
+    top: 4px;
+    right: -40px;
+    width: 292px;
+    height: 300px;
+}
+
+.about-me .question-me {
+    margin: 30px 0;
+    font: normal normal bold 40px/50px 'Playfair Display';
+    color: var(--TextColor);
+}
+
+.about-me .answer {
+    font: normal normal 300 18px/35px 'Montserrat';
+}
+
+.about-me .answer span {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+
+.about-me .main-button {
+    margin-top: 30px;
+    padding: 30px 60px;
+}
+
+@media (max-width:768px) {
+    .about-me .img::before, .about-me .img::after {
+        content: none;
+    }
+    .about-me .img {
+        height: 340px;
+    }
+}
+
+/* End About-section */
+
+/* Strat my-services-section */
+
+.my-services {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.my-services .cards-title {
+    font: normal normal bold 40px/50px;
+    font-family: 'Playfair Display', serif;
+    margin-top: 26px;
+    margin-bottom: 100px;
+}
+
+.my-services .card-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 420px));
+    gap: 45px;
+    justify-content: center;
+}
+
+.my-services .card-container .card {
+    text-align: left;
+    box-shadow: 0px 20px 20px #7682B72E;
+    padding: 50px 45px;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    background-color: #fff;
+}
+
+.my-services .card-container .card:last-of-type::after {
+    content: '';
+    position: absolute;
+    background-image: url(img/Group\ 230.png);
+    background-repeat: no-repeat;
+    bottom: -90px;
+    right: -98px;
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+}
+
+@media (max-width:768px) {
+    .my-services .card-container .card:last-of-type::after {
+        content: none;
+    }
+}
+
+.my-services .card-container .card:hover, .my-services .card-container .card:hover .circle, .my-services .card-container .card:hover .cls-1 {
+    background-color: var(--mainColor);
+    color: #FFF;
+    border-color: #fff;
+    fill: #fff;
+}
+
+.my-services .card-container .card .circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--mainColor);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-bottom: 26px;
+}
+
+.my-services .card-container .card .cls-1 {
+    fill: var(--mainColor);
+}
+
+.my-services .card-container .card .title-card {
+    font: normal normal bold 26px "Playfair Display";
+    margin-bottom: 40px;
+}
+
+.my-services .card-container .card .dashed {
+    display: flex;
+    width: 104px;
+    gap: 20px
+}
+
+.my-services .card-container .card .dashed span {
+    display: inline-block;
+    width: 20px;
+    background-color: var(--mainColor);
+    height: 3px;
+    margin-bottom: 25px;
+}
+
+.my-services .card-container .card:hover .dashed span {
+    background-color: #fff;
+}
+
+.my-services .card-container .card .description {
+    width: 90%;
+    font: normal normal 300 16px/35px "Montserrat";
+    margin-bottom: 26px;
+}
+
+.my-services .card-container .card .main-button {
+    width: 151px;
+    height: 39px;
+    padding: 0;
+    font: normal normal normal 16px/35px "Playfair Display";
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.my-services .card-container .card:hover .main-button {
+    background-color: #FFF;
+    color: var(--mainColor);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+/* End my-services-section */
+
+/* Start my_expertise-section */
+
+.my_expertise {
+    margin-top: 150px;
+}
+
+.my_expertise .titles {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.my_expertise .Section-subtitle {
+    margin-top: 10px;
+    font: normal normal bold 36px/45px "Playfair Display";
+    color: var(--TextColor);
+}
+
+.my_expertise .card-container {
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 420px));
+    gap: 65px;
+    justify-content: center;
+}
+
+.my_expertise .skill-card {
+    text-align: center;
+}
+
+.my_expertise .skill-card .skill {
+    font: normal normal bold 27px/36px "Playfair Display";
+    color: var(--TextColor);
+}
+
+.html-color {
+    color: #E44D26;
+}
+
+.css-color {
+    color: #1572B7;
+}
+
+.js-color {
+    color: #EFD81D;
+}
+
+.react-color {
+    color: #5ED3F3;
+}
+
+.git-color {
+    color: #E84E31;
+}
+
+.bootstrap-color {
+    color: #7811F2;
+}
+
+@media (max-width:768px) {
+    .my_expertise .titles {
+        justify-content: center;
+    }
+}
+
+/* End my_expertise-section */
+
+/* Srat portfolio-section */
+
+.portfolio {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.portfolio .Section-subtitle {
+    margin-top: 15px;
+    font: normal normal bold 40px/50px "Playfair Display";
+    color: var(--TextColor);
+}
+
+.portfolio .filter {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.portfolio .filter-item {
+    list-style: none;
+    font: normal normal normal 18px/35px "Playfair Display";
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.portfolio .filter-item:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    background-color: var(--seconderyColor);
+    animation-name: borderanim;
+    animation-duration: 0.5s;
+    width: 100%;
+}
+
+.portfolio .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 476px));
+    gap: 25px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.portfolio .card {
+    text-align: left;
+    box-shadow: 0px 20px 20px #7682B72E;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlayer {
+    display: none;
+    position: relative;
+}
+
+.portfolio .card:hover .overlayer {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--mainColor-op08);
+    color: white;
+}
+
+.portfolio .card img {
+    position: relative;
+}
+
+.portfolio .card .text {
+    padding: 50px;
+}
+
+.portfolio .card .title-card {
+    font: normal normal bold 26px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.portfolio .card .skills-card {
+    font: normal normal normal 16px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.portfolio .card .dashed {
+    display: flex;
+    width: 104px;
+    gap: 20px
+}
+
+.portfolio .card .dashed span {
+    display: inline-block;
+    width: 20px;
+    background-color: var(--mainColor);
+    height: 3px;
+    margin-bottom: 25px;
+}
+
+.portfolio .card:hover .dashed span {
+    background-color: #fff;
+}
+
+.portfolio .card .description {
+    font: normal normal 299 16px/32px "Montserrat";
+    margin-bottom: 25px;
+}
+
+.portfolio .card .main-button {
+    width: 151px;
+    height: 39px;
+    padding: 0;
+    font: normal normal normal 16px/35px "Playfair Display";
+    background-color: white;
+    color: var(--mainColor);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    position: absolute;
+    bottom: 45px;
+}
+
+/* End portfolio-section */
+
+/* Start testimonials-section */
+
+.testimonials {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.testimonials .Section-subtitle {
+    font: normal normal bold 40px/50px "Playfair Display";
+    margin-top: 28px;
+    margin-bottom: 80px;
+}
+
+/* End testimonials-section */
+
+/* Start contact-section */
+
+.contact {
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+.contact .Section-subtitle {
+    font: normal normal bold 40px/50px "Playfair Display";
+    margin-top: 28px;
+    color: var(--TextColor);
+    margin-bottom: 80px;
+}
+
+.contact img {
+    position: absolute;
+    z-index: -1;
+    top: -115px;
+    right: 0;
+    left: 0%;
+    bottom: 0;
+}
+
+.contact form .form-grid {
+    display: grid;
+    gap: 50px;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact form input, .contact form select, .contact form textarea {
+    padding: 25px;
+    border: 1px solid var(--TextColor);
+    border-radius: 5px;
+}
+
+.contact form input::placeholder, .contact form input[value], .contact form textarea::placeholder, .contact form select option, .contact form select[value], .contact form textarea[value] {
+    color: var(--TextColor);
+    font: normal normal 300 18px/22px Montserrat;
+}
+
+@media (max-width:768px) {
+    .contact form .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:1024px) {
+    .contact img {
+        display: none;
+    }
+}
+
+/* End contact-section */
+
+/* start footer-section */
+
+footer .container {
+    display: flex;
+    margin-top: 120px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .logo {
+    color: var(--TextColor);
+    font: normal normal bold 49px/47px 'Poppins';
+    cursor: unset;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .logo span {
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+}
+
+footer .info-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+footer .info-me .qouteofme {
+    width: 50%;
+    text-align: left;
+    font: normal normal bold 32px/50px Playfair Display;
+    letter-spacing: 0px;
+    color: var(--TextColor);
+}
+
+footer .info-me .infome {
+    display: flex;
+    gap: 60px;
+    margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer .info-me .over-each .title-of-info {
+    font: normal normal normal 18px/35px "Playfair Display";
+    letter-spacing: 0px;
+    color: #0F50BF;
+}
+
+footer .info-me .over-each .info {
+    font: normal normal bold 20px/40px "Playfair Display";
+    letter-spacing: 0px;
+    color: var(--TextColor);
+}
+
+footer hr {
+    margin-top: 30px;
+    color: var(--TextColor)
+}
+
+footer .developer {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font: normal normal 300 18px/35px "Montserrat";
+    letter-spacing: 0px;
+    color: var(--TextColor);
+}
+
+footer .developer span {
+    color: #2196f3;
+}
+
+@media (max-width:768px) {
+    footer .info-me .qouteofme {
+        width: 100%;
+    }
+    footer .info-me .infome {}
+}
+
+/* end footer-section */
