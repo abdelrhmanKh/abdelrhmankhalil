@@ -901,12 +901,24 @@ footer .developer span {
 
 /* start small screens*/
 
+@media (max-width:500px) {
+    .portfolio .card img {
+        width: 100%;
+    }
+    .portfolio .card .description {
+        display: none;
+    }
+}
+
 @media(max-width:768px) {
     .Section-title {
-        font-size: 18px;
+        font-size: 18px !important;
     }
     .Section-subtitle {
-        font-size: 28px;
+        font-size: 28px !important;
+    }
+    .main-button {
+        font-size: 16px !important;
     }
     .floating-social {
         display: none;
@@ -923,9 +935,6 @@ footer .developer span {
     }
     .about-me .img::before, .about-me .img::after {
         content: none;
-    }
-    .main-button {
-        font-size: 16px;
     }
     .about-me .main-button {
         padding: 25px 55px;
