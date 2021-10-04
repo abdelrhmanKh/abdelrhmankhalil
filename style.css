@@ -375,6 +375,7 @@ header .nav-menu .nav-item:hover::after {
 .about-me .img {
     width: 100%;
     position: relative;
+    height: 100%;
 }
 
 .about-me .img::before {
@@ -428,9 +429,6 @@ header .nav-menu .nav-item:hover::after {
 @media (max-width:768px) {
     .about-me .img::before, .about-me .img::after {
         content: none;
-    }
-    .about-me .img {
-        height: 340px;
     }
 }
 
