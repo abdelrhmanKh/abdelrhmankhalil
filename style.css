@@ -908,6 +908,9 @@ footer .developer span {
     .portfolio .card .description {
         display: none;
     }
+    .contact form textarea {
+        width: 105%;
+    }
 }
 
 @media(max-width:768px) {
