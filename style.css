@@ -647,7 +647,7 @@ header .nav-menu .nav-item:hover::after {
 
 .portfolio .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 476px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 445px));
     gap: 25px;
     justify-content: center;
     margin-top: 50px;
