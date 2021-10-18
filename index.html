@@ -449,13 +449,13 @@
         <div class="container">
             <form id='formProject'>
                 <div class="form-grid">
-                    <input type="text" name="name" id="name" placeholder="Name" value='' required>
+                    <input type="text" name="name" id="form_name" placeholder="Name" value='' required>
 
                     <input type="email" name="email" id="email" placeholder="Email" value='' required>
 
-                    <input type="tel" name="tel" id="tel" placeholder="Phone#" value='' required>
+                    <input type="tel" name="tel" id="phone_number" placeholder="Phone#" value='' required>
 
-                    <select name="budget" id="budget" value='' required>
+                    <select name="budget" id="price" value='' required>
                         <option value="">--Please choose an Budget--</option>
                         <option value="100">0-100$</option>
                         <option value="200">100-200$</option>
@@ -467,7 +467,7 @@
 
 
                 </div>
-                <textarea name="Project" id="project" cols="30" rows="10" placeholder="Message" value=''
+                <textarea name="Project" id="message" cols="30" rows="10" placeholder="Message" value=''
                     style="resize: none;" required></textarea>
 
                 <button class="main-button" id='sendMessage'>Send Message</button>
