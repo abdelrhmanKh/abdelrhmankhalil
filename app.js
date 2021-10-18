@@ -1,16 +1,18 @@
-const form_name = document.getElementById('name').value
-const phone_number = document.getElementById('tel').value
-const price = document.getElementById('budget').value
-const message = document.getElementById('project').value
-const email = document.getElementById('email').value
 
-function sendEmail(e) {
-    e.preventDefault();
-    emailjs.send("service_lftwgdg", "template_28hhmbm", {
-        from_name: form_name,
-        phone_number: phone_number,
-        price: price,
-        message: message,
-        email: email,
+const btn = document.getElementById('sendMessage');
+
+document.getElementById('formProject')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        emailjs.sendForm("service_lftwgdg", "template_28hhmbm", this)
+            .then(() => {
+                btn.value = 'Send Message';
+
+            }, (err) => {
+                btn.value = 'Send Message';
+                alert(JSON.stringify(err));
+            });
     });
-}
