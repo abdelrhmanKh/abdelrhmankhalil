@@ -15,7 +15,7 @@ document.getElementById('formProject')
 
         btn.innerText = 'Sending...';
 
-        emailjs.sendForm("service_lftwgdg", "template_28hhmbm", formText)
+        emailjs.send("service_lftwgdg", "template_28hhmbm", formText)
             .then(() => {
                 btn.innerText = 'Send Message';
             }, (err) => {
@@ -23,3 +23,4 @@ document.getElementById('formProject')
                 alert(JSON.stringify(err));
             });
     });
+
