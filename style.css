@@ -16,12 +16,13 @@ font-family: 'Microsoft';
 @font-face {
     font-family: 'Microsoft';
     src: url('/font/chinese.msyh.ttf');
+    font-display: swap;
 }
 
 :root {
     --mainColor: hsl(218, 85%, 40%);
     --mainColor-op08: rgba(15, 79, 189, 0.8);
-    --seconderyColor: hsl(41, 78%, 55%);
+    --seconderyColor: hsl(330, 72%, 48%);
     --seconderyColor-op10: hsla(41, 78%, 55%, 0.1);
     --TextColor: hsl(229, 51%, 17%);
     --shadowColor: hsla(229, 31%, 59%, 0.18);
@@ -154,6 +155,12 @@ html {
     fill: #fff;
 }
 
+@media (max-width:768px) {
+    .floating-social {
+        display: none;
+    }
+}
+
 /* End Floating Social */
 
 /* Start My FrameWork */
@@ -246,6 +253,12 @@ header .nav-menu {
     font: normal normal normal 18px/22px 'Montserrat';
 }
 
+@media(max-width:768px) {
+    header .nav-menu, header .main-button {
+        display: none;
+    }
+}
+
 header .nav-menu .nav-item {
     cursor: pointer;
     color: var(--TextColor);
@@ -323,7 +336,7 @@ header .nav-menu .nav-item:hover::after {
 
 .landing-section .my-job-title span a {
     text-decoration: none;
-    color: yellowgreen;
+    color: #578104;
 }
 
 .landing-section .description {
@@ -340,6 +353,12 @@ header .nav-menu .nav-item:hover::after {
     background-position: center;
 }
 
+@media (max-width:992px) {
+    .landing-section .img {
+        display: none;
+    }
+}
+
 /* End landing-section */
 
 /* Start About-section */
@@ -352,15 +371,10 @@ header .nav-menu .nav-item:hover::after {
     display: grid;
     gap: 50px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 665px));
+    justify-items: center;
 }
 
-.about-me .img {
-    width: 100%;
-    position: relative;
-    height: 100%;
-}
-
-.about-me .img::before {
+/* .about-me .img::before {
     content: "";
     position: absolute;
     z-index: 2;
@@ -385,7 +399,7 @@ header .nav-menu .nav-item:hover::after {
     right: -40px;
     width: 292px;
     height: 300px;
-}
+} */
 
 .about-me .question-me {
     margin: 30px 0;
@@ -406,6 +420,15 @@ header .nav-menu .nav-item:hover::after {
 .about-me .main-button {
     margin-top: 30px;
     padding: 30px 60px;
+}
+
+@media (max-width:768px) {
+    .about-me .img::before, .about-me .img::after {
+        content: none;
+    }
+    .about-me .img {
+        height: 340px;
+    }
 }
 
 /* End About-section */
@@ -460,6 +483,12 @@ header .nav-menu .nav-item:hover::after {
     width: 250px;
     height: 250px;
     z-index: -1;
+}
+
+@media (max-width:768px) {
+    .my-services .card-container .card:last-of-type::after {
+        content: none;
+    }
 }
 
 .my-services .card-container .card:hover, .my-services .card-container .card:hover .circle, .my-services .card-container .card:hover .cls-1 {
@@ -602,6 +631,12 @@ header .nav-menu .nav-item:hover::after {
     color: #7811F2;
 }
 
+@media (max-width:768px) {
+    .my_expertise .titles {
+        justify-content: center;
+    }
+}
+
 /* End my_expertise-section */
 
 /* Srat portfolio-section */
@@ -620,9 +655,9 @@ header .nav-menu .nav-item:hover::after {
 .portfolio .filter {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 15px;
-    align-items: center;
+    position: relative;
 }
 
 .portfolio .filter-item {
@@ -633,7 +668,7 @@ header .nav-menu .nav-item:hover::after {
     cursor: pointer;
 }
 
-.portfolio .filter-item:hover::after {
+.portfolio .filter-item:hover::after, .portfolio .filter-item.active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -647,7 +682,7 @@ header .nav-menu .nav-item:hover::after {
 
 .portfolio .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 445px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 446px));
     gap: 25px;
     justify-content: center;
     margin-top: 50px;
@@ -754,7 +789,6 @@ header .nav-menu .nav-item:hover::after {
 /* Start testimonials-section */
 
 .testimonials {
-    display: none;
     text-align: center;
     margin-top: 80px;
 }
@@ -804,7 +838,7 @@ header .nav-menu .nav-item:hover::after {
 }
 
 .contact form input, .contact form select, .contact form textarea {
-    padding: 20px 10px;
+    padding: 25px;
     border: 1px solid var(--TextColor);
     border-radius: 5px;
 }
@@ -812,6 +846,18 @@ header .nav-menu .nav-item:hover::after {
 .contact form input::placeholder, .contact form input[value], .contact form textarea::placeholder, .contact form select option, .contact form select[value], .contact form textarea[value] {
     color: var(--TextColor);
     font: normal normal 300 18px/22px Montserrat;
+}
+
+@media (max-width:768px) {
+    .contact form .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:1024px) {
+    .contact img {
+        display: none;
+    }
 }
 
 /* End contact-section */
@@ -896,81 +942,18 @@ footer .developer {
 
 footer .developer span {
     color: #2196f3;
+    cursor: pointer;
 }
 
-/* end footer-section */
-
-/* start small screens*/
-
-@media (max-width:500px) {
-    .portfolio .card img {
-        width: 100%;
-    }
-    .portfolio .card .description {
-        display: none;
-    }
-    .contact form textarea {
-        width: 105%;
-    }
-    footer .info-me {
-        width: 90%;
-    }
+footer .developer:hover span {
+    color: red;
 }
 
-@media(max-width:768px) {
-    .Section-title {
-        font-size: 18px !important;
-    }
-    .Section-subtitle {
-        font-size: 28px !important;
-    }
-    .main-button {
-        font-size: 16px !important;
-    }
-    .floating-social {
-        display: none;
-    }
-    .my-services .card-container .card .title-card {
-        font-size: 16px;
-    }
-    .my-services .card-container .card .description {
-        font-size: 12px;
-        line-height: 30px;
-    }
-    header .nav-menu, header .main-button {
-        display: none;
-    }
-    .about-me .img::before, .about-me .img::after {
-        content: none;
-    }
-    .about-me .main-button {
-        padding: 25px 55px;
-    }
-    .my_expertise .titles {
-        justify-content: center;
-    }
-    .portfolio .filter-item {
-        font-size: 13px;
-        line-height: 25px;
-    }
-    .contact form .form-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (max-width:768px) {
     footer .info-me .qouteofme {
         width: 100%;
     }
-    .my-services .card-container .card:last-of-type::after {
-        content: none;
-    }
+    footer .info-me .infome {}
 }
 
-@media (max-width:992px) {
-    .landing-section .img {
-        display: none;
-    }
-    .contact img {
-        display: none;
-    }
-}
-
-/* start small screens*/
+/* end footer-section */
