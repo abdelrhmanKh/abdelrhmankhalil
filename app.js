@@ -3,18 +3,16 @@ const btn = document.getElementById('sendMessage');
 
 document.getElementById('formProject')
     .addEventListener('submit', function (event) {
-
         event.preventDefault();
-        var formText = {
+        btn.innerText = 'Sending...';
+
+        emailjs.send("service_lftwgdg", "template_28hhmbm", {
             from_name: document.getElementById('form_name').value,
             phone_number: document.getElementById('phone_number').value,
             price: document.getElementById('price').value,
             message: document.getElementById('Project').value,
             email: document.getElementById('email').value,
-        };
-        btn.innerText = 'Sending...';
-
-        emailjs.send("service_lftwgdg", "template_28hhmbm", formText)
+        })
             .then(() => {
                 btn.innerText = 'Send Message';
             }, (err) => {
