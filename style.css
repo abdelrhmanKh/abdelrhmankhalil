@@ -23,13 +23,14 @@ font-family: 'Microsoft';
     --mainColor: hsl(218, 85%, 40%);
     --mainColor-op08: rgba(15, 79, 189, 0.8);
     --seconderyColor: hsl(330, 72%, 48%);
-    --seconderyColor-op10: hsla(41, 78%, 55%, 0.1);
+    --seconderyColor-op10: hsla(330, 72%, 48%, 0.1);
     --TextColor: hsl(229, 51%, 17%);
     --shadowColor: hsla(229, 31%, 59%, 0.18);
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .box-shadow {
@@ -246,6 +247,10 @@ header .logo span {
     padding: 5px;
 }
 
+.logo:hover span {
+    background-color: var(--seconderyColor);
+}
+
 header .nav-menu {
     list-style: none;
     display: flex;
@@ -275,7 +280,7 @@ header .nav-menu .nav-item a {
     text-decoration: none;
 }
 
-header .nav-menu .nav-item:hover::after {
+header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -351,6 +356,20 @@ header .nav-menu .nav-item:hover::after {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    position: relative;
+}
+
+.landing-section .img:after {
+    position: absolute;
+    content: '';
+    background-color: var(--mainColor);
+    width: 2000px;
+    height: 450px;
+    z-index: -1;
+    top: -345px;
+    left: -103px;
+    border-radius: 225px;
+    transform: rotate( 324deg);
 }
 
 @media (max-width:992px) {
@@ -789,6 +808,7 @@ header .nav-menu .nav-item:hover::after {
 /* Start testimonials-section */
 
 .testimonials {
+    display: none;
     text-align: center;
     margin-top: 80px;
 }
