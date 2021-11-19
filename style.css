@@ -296,6 +296,7 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
     from {
         width: 0px;
     }
+
     to {
         width: 100%;
     }
@@ -350,7 +351,7 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
 }
 
 .landing-section .img {
-    width: 530px;
+    width: 45%;
     height: 680px;
     background-image: url('img/Group\ 204.png');
     background-repeat: no-repeat;
@@ -359,8 +360,8 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
     position: relative;
 }
 
-.landing-section .img:after {
-    position: absolute;
+/* .landing-section .img:after {
+       position: absolute; 
     content: '';
     background-color: var(--mainColor);
     width: 2000px;
@@ -369,8 +370,8 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
     top: -345px;
     left: -103px;
     border-radius: 225px;
-    transform: rotate( 324deg);
-}
+    transform: rotate(324deg);
+} */
 
 @media (max-width:992px) {
     .landing-section .img {
@@ -445,6 +446,7 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
     .about-me .img::before, .about-me .img::after {
         content: none;
     }
+
     .about-me .img {
         height: 340px;
     }
@@ -973,6 +975,7 @@ footer .developer:hover span {
     footer .info-me .qouteofme {
         width: 100%;
     }
+
     footer .info-me .infome {}
 }
 
