@@ -258,7 +258,7 @@ header .nav-menu {
     font: normal normal normal 18px/22px 'Montserrat';
 }
 
-@media(max-width:768px) {
+@media(max-width:997px) {
     header .nav-menu, header .main-button {
         display: none;
     }
@@ -388,10 +388,12 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
 }
 
 .about-me .container {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 665px));
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me .text {
+    text-align: center;
 }
 
 /* .about-me .img::before {
@@ -442,7 +444,15 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
     padding: 30px 60px;
 }
 
+@media(max-width:997px) {
+    .about-me .container {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width:768px) {
+
+
     .about-me .img::before, .about-me .img::after {
         content: none;
     }
@@ -755,13 +765,14 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
 }
 
 .portfolio .card .title-card {
-    font: normal normal bold 26px;
+    font-weight: bold;
+    font-size: 25px;
     font-family: 'Playfair Display', serif;
     margin-bottom: 20px;
 }
 
 .portfolio .card .skills-card {
-    font: normal normal normal 16px;
+    font-size: 18px;
     font-family: 'Playfair Display', serif;
     margin-bottom: 10px;
 }
@@ -769,7 +780,8 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
 .portfolio .card .dashed {
     display: flex;
     width: 104px;
-    gap: 20px
+    gap: 20px;
+    height: 10px;
 }
 
 .portfolio .card .dashed span {
@@ -803,6 +815,24 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
     -o-border-radius: 0;
     position: absolute;
     bottom: 45px;
+}
+
+@media (max-width:768px) {
+    .portfolio .card .title-card {
+        font-size: 20px;
+    }
+
+    .portfolio .card .skills-card {
+        font-size: 15px;
+    }
+
+    .portfolio .card .description {
+        font-size: 14px;
+    }
+
+    .portfolio .card .text {
+        padding: 29px
+    }
 }
 
 /* End portfolio-section */
@@ -917,11 +947,11 @@ footer .info-me {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
+
 }
 
 footer .info-me .qouteofme {
-    width: 50%;
+    width: 70%;
     text-align: left;
     font: normal normal bold 32px/50px Playfair Display;
     letter-spacing: 0px;
