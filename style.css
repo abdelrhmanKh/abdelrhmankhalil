@@ -872,7 +872,7 @@ header .nav-menu .nav-item:hover::after, header .nav-menu .nav-item.active::afte
 
 @media (max-width:768px) {
     .contact form .form-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 100%);
     }
 }
 
@@ -976,7 +976,9 @@ footer .developer:hover span {
         width: 100%;
     }
 
-    footer .info-me .infome {}
+    footer .info-me .infome {
+        max-width: 100%;
+    }
 }
 
 /* end footer-section */
